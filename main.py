@@ -49,11 +49,11 @@ elif uzivatele[jmeno] != heslo:
     sys.exit()
 else:
     print(f"Welcome to the app, {jmeno}!")
-    print("We have 3 texts to be analyzed.")
+    print(f"We have {len(TEXTS)} texts to be analyzed.")
     try:
         vyber = int(input("Enter a number btw. 1 and 3 to select: "))
 
-        if vyber < 1 or vyber > 3:
+        if vyber < 1 or vyber > len(TEXTS):
             print("Invalid number, exiting program.")
             sys.exit()
         else:
